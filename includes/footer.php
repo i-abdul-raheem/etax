@@ -1,0 +1,96 @@
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-yellow-500 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-gavel text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold">eTax consultants</span>
+                </div>
+                <p class="text-gray-300 mb-4 leading-relaxed">
+                    Pakistan's leading tax consultancy firm with over 20 years of experience. 
+                    We provide comprehensive tax solutions for individuals and businesses across Pakistan.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.php" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.php" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="about.php" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="blog.php" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="contact.php" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="services.php#litigation" class="text-gray-300 hover:text-white transition-colors">Litigation</a></li>
+                    <li><a href="services.php#compliance" class="text-gray-300 hover:text-white transition-colors">Tax Compliance</a></li>
+                    <li><a href="services.php#advisory" class="text-gray-300 hover:text-white transition-colors">Advisory</a></li>
+                    <li><a href="services.php#international" class="text-gray-300 hover:text-white transition-colors">International Tax</a></li>
+                    <li><a href="services.php#corporate" class="text-gray-300 hover:text-white transition-colors">Corporate Tax</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Office Locations -->
+        <div class="mt-12 pt-8 border-t border-gray-800">
+            <h3 class="text-lg font-semibold mb-6 text-center">Our Offices</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <h4 class="font-semibold text-blue-400 mb-2">Karachi</h4>
+                    <p class="text-sm text-gray-300">Suite No.14, 6th Floor, Rimpa Plaza, M.A Jinnah Road</p>
+                    <p class="text-sm text-gray-300 mt-1">+92 21 3582 1757</p>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="font-semibold text-blue-400 mb-2">Lahore</h4>
+                    <p class="text-sm text-gray-300">2nd Floor, Badar Centre, 5 Mclagon Road</p>
+                    <p class="text-sm text-gray-300 mt-1">+92-42-7122735</p>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="font-semibold text-blue-400 mb-2">Islamabad</h4>
+                    <p class="text-sm text-gray-300">No. 1, Street 2, Sector G-11/1</p>
+                    <p class="text-sm text-gray-300 mt-1">+92 334 514 3163</p>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="font-semibold text-blue-400 mb-2">Multan</h4>
+                    <p class="text-sm text-gray-300">2nd Floor, Ghazi Tower of Khan Center Abdali Road</p>
+                    <p class="text-sm text-gray-300 mt-1">+92 305 414 3542</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+            <p class="text-gray-400">
+                &copy; <?php echo date('Y'); ?> eTax consultants Pakistan. All rights reserved. | 
+                <a href="privacy.php" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a> | 
+                <a href="terms.php" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>
