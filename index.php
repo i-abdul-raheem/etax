@@ -59,7 +59,7 @@ require_once 'includes/db.sqlite.php';
                     </div>
                     <div class="flex items-center gap-2">
                         <i class="fas fa-envelope text-blue-600"></i>
-                        <span>info@taxpulse-pakistan.com</span>
+                        <span>info@etaxconsultants.org</span>
                     </div>
                 </div>
             </div>
@@ -297,7 +297,7 @@ require_once 'includes/db.sqlite.php';
                             <i class="fas fa-envelope text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Email Us</h3>
-                        <p class="text-blue-100">info@taxpulse-pakistan.com</p>
+                        <p class="text-blue-100">info@etaxconsultants.org</p>
                     </div>
                     
                     <div class="flex flex-col items-center text-center">

@@ -11,28 +11,28 @@ const offices = [
     address: 'Suite No.14, 6th Floor, Rimpa Plaza, M.A Jinnah Road Karachi, Pakistan',
     phone: '+92 21 3582 1757',
     mobile: '+92 304 297 0595',
-    email: 'info@taxpulse-pakistan.com'
+    email: 'info@etaxconsultants.org'
   },
   {
     city: 'Lahore',
     address: '2nd Floor, Badar Centre, 5 Mclagon Road, Lahore, Pakistan',
     phone: '+92-42-7122735',
     mobile: '+92 334 514 3163',
-    email: 'info@taxpulse-pakistan.com'
+    email: 'info@etaxconsultants.org'
   },
   {
     city: 'Islamabad',
     address: 'No. 1, Street 2, Sector G-11/1, Islamabad, Pakistan',
     phone: '+92 334 514 3163',
     mobile: '+92 334 514 3163',
-    email: 'info@taxpulse-pakistan.com'
+    email: 'info@etaxconsultants.org'
   },
   {
     city: 'Multan',
     address: '2nd Floor, Ghazi Tower of Khan Center Abdali Road, Multan Cantt',
     phone: '+92 305 414 3542',
     mobile: '+92 305 414 3542',
-    email: 'info@taxpulse-pakistan.com'
+    email: 'info@etaxconsultants.org'
   }
 ]
 

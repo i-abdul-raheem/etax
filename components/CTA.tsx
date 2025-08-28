@@ -67,7 +67,7 @@ export default function CTA() {
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="text-primary-100">info@taxpulse-pakistan.com</p>
+              <p className="text-primary-100">info@etaxconsultants.org</p>
             </div>
             
             <div className="flex flex-col items-center text-center">

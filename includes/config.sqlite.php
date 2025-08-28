@@ -9,12 +9,12 @@ define('DB_FILE', __DIR__ . '/../database/taxpulse.db');
 // Site configuration
 define('SITE_NAME', 'eTax consultants Pakistan');
 define('SITE_URL', 'http://localhost:8000');
-define('SITE_EMAIL', 'info@taxpulse-pakistan.com');
+define('SITE_EMAIL', 'info@etaxconsultants.org');
 define('SITE_PHONE', '+92 21 3582 1757');
 
 // Blog configuration
 define('POSTS_PER_PAGE', 6);
-define('ADMIN_EMAIL', 'admin@taxpulse-pakistan.com');
+define('ADMIN_EMAIL', 'admin@etaxconsultants.org');
 
 // Security
 define('HASH_COST', 12);

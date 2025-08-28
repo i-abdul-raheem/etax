@@ -83,7 +83,7 @@ CREATE TABLE settings (
 
 -- Insert default admin user (password: admin123)
 INSERT INTO users (username, email, password_hash, full_name, role) VALUES 
-('admin', 'admin@taxpulse-pakistan.com', '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Administrator', 'admin');
+('admin', 'admin@etaxconsultants.org', '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Administrator', 'admin');
 
 -- Insert default categories
 INSERT INTO categories (name, slug, description) VALUES
@@ -100,7 +100,7 @@ INSERT INTO categories (name, slug, description) VALUES
 INSERT INTO settings (setting_key, setting_value, description) VALUES
 ('site_name', 'eTax consultants Pakistan', 'Website name'),
 ('site_description', 'Pakistan''s leading tax consultancy firm', 'Website description'),
-('site_email', 'info@taxpulse-pakistan.com', 'Main contact email'),
+('site_email', 'info@etaxconsultants.org', 'Main contact email'),
 ('site_phone', '+92 21 3582 1757', 'Main contact phone'),
 ('posts_per_page', '6', 'Number of blog posts per page'),
 ('allow_comments', '1', 'Allow comments on blog posts'),

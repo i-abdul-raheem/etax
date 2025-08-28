@@ -254,7 +254,7 @@ $selectedService = isset($_GET['service']) ? sanitize($_GET['service']) : '';
                                 </div>
                                 <div>
                                     <p class="text-sm text-gray-600">Email</p>
-                                    <p class="font-semibold text-gray-900">info@taxpulse-pakistan.com</p>
+                                    <p class="font-semibold text-gray-900">info@etaxconsultants.org</p>
                                 </div>
                             </div>
                             

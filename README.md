@@ -57,7 +57,7 @@ A modern, responsive tax consultancy website built with PHP, featuring a blog sy
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd taxpulse-pakistan
+cd etaxconsultants.org
 ```
 
 ### 2. Set Up Database
@@ -92,7 +92,7 @@ Configure your web server to point to the project directory. Ensure the followin
 ## File Structure
 
 ```
-taxpulse-pakistan/
+etaxconsultants.org/
 ├── assets/
 │   ├── css/
 │   └── js/
@@ -181,7 +181,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support and questions:
-- Email: info@taxpulse-pakistan.com
+- Email: info@etaxconsultants.org
 - Phone: +92 21 3582 1757
 
 ## Changelog
