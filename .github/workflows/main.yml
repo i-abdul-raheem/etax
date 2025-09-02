@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.CPANEL_FTP_PASS }}
           protocol: ftps                       # use 'ftp' if your host doesn't support FTPS
           local-dir: ./                        # upload everything from repo root
-          server-dir: /public_html/            # <-- set this to your target dir
+          server-dir: /            # <-- set this to your target dir
           exclude: |
             **/.git*
             **/.github/**
