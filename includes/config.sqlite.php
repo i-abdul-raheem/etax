@@ -7,7 +7,7 @@ define('DB_TYPE', 'sqlite');
 define('DB_FILE', __DIR__ . '/../database/taxpulse.db');
 
 // Site configuration
-define('SITE_NAME', 'eTax Consultants Pakistan');
+define('SITE_NAME', 'eTax Consultants');
 define('SITE_URL', 'http://localhost:8000');
 define('SITE_EMAIL', 'info@etaxconsultants.org');
 define('SITE_PHONE', '+92 61 651 3692');
