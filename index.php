@@ -8,7 +8,7 @@ require_once 'includes/db.sqlite.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eTax consultants Pakistan - Leading Tax Consultancy Services</title>
+    <title><?php echo SITE_NAME; ?> Pakistan - Leading Tax Consultancy Services</title>
     <meta name="description" content="Pakistan's premier tax consultancy firm offering expert advice on income tax, sales tax, customs, and international taxation. Get free consultation today!">
     <meta name="keywords" content="tax consultancy, pakistan, income tax, sales tax, customs, international taxation, tax lawyer">
     
@@ -16,6 +16,7 @@ require_once 'includes/db.sqlite.php';
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body class="font-sans antialiased">
@@ -23,43 +24,43 @@ require_once 'includes/db.sqlite.php';
     <?php include 'includes/header.php'; ?>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-yellow-50">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-white to-green-50">
         <!-- Background Elements -->
         <div class="absolute inset-0">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-            <div class="absolute top-40 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+            <div class="absolute top-40 right-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-balance">
-                    Pakistan's Leading <span class="bg-gradient-to-r from-blue-600 to-yellow-500 bg-clip-text text-transparent">Tax Consultancy</span>
+                    Pakistan's Leading <span class="bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent">Tax Consultancy</span>
                 </h1>
                 
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Expert tax advice for individuals and businesses. From income tax to international taxation, 
+                    Expert tax advice for individuals and businesses. From individual taxation to corporate taxation, 
                     we provide comprehensive solutions with speed and precision.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <a href="contact.php" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg group">
+                    <a href="<?php echo MEETING_LINK; ?>" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg group">
                         Get Free Consultation
                         <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    <a href="services.php" class="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+                    <a href="services.php" class="bg-white hover:bg-gray-50 text-purple-600 border-2 border-purple-600 font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
                         Our Services
                     </a>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-600">
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-phone text-blue-600"></i>
-                        <span>+92 21 3582 1757</span>
+                        <i class="fas fa-phone text-purple-600"></i>
+                        <span><?php echo SITE_PHONE; ?></span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-envelope text-blue-600"></i>
-                        <span>info@etaxconsultants.org</span>
+                        <i class="fas fa-envelope text-purple-600"></i>
+                        <span><?php echo SITE_EMAIL; ?></span>
                     </div>
                 </div>
             </div>
@@ -74,25 +75,25 @@ require_once 'includes/db.sqlite.php';
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center group">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
                         <i class="fas fa-users text-2xl"></i>
                     </div>
-                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">5000+</div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">500+</div>
                     <div class="text-xl font-semibold mb-2">Happy Clients</div>
-                    <div class="text-blue-100 text-sm">Satisfied customers across Pakistan</div>
+                    <div class="text-purple-100 text-sm">Satisfied customers across Pakistan</div>
                 </div>
                 
                 <div class="text-center group">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
                         <i class="fas fa-award text-2xl"></i>
                     </div>
-                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">20+</div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">6+</div>
                     <div class="text-xl font-semibold mb-2">Years Experience</div>
-                    <div class="text-blue-100 text-sm">Decades of tax expertise</div>
+                    <div class="text-purple-100 text-sm">Decades of tax expertise</div>
                 </div>
                 
                 <div class="text-center group">
@@ -101,7 +102,7 @@ require_once 'includes/db.sqlite.php';
                     </div>
                     <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">24/7</div>
                     <div class="text-xl font-semibold mb-2">Support Available</div>
-                    <div class="text-blue-100 text-sm">Round-the-clock assistance</div>
+                    <div class="text-purple-100 text-sm">Round-the-clock assistance</div>
                 </div>
                 
                 <div class="text-center group">
@@ -110,7 +111,7 @@ require_once 'includes/db.sqlite.php';
                     </div>
                     <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">99%</div>
                     <div class="text-xl font-semibold mb-2">Success Rate</div>
-                    <div class="text-blue-100 text-sm">Proven track record</div>
+                    <div class="text-purple-100 text-sm">Proven track record</div>
                 </div>
             </div>
         </div>
@@ -121,7 +122,7 @@ require_once 'includes/db.sqlite.php';
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    Our <span class="bg-gradient-to-r from-blue-600 to-yellow-500 bg-clip-text text-transparent">Services</span>
+                    Our <span class="bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent">Services</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Comprehensive tax solutions covering all aspects of taxation in Pakistan. 
@@ -132,20 +133,20 @@ require_once 'includes/db.sqlite.php';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <?php
                 $services = [
+                    ['icon' => 'fas fa-user-tie', 'title' => 'Income Tax', 'description' => 'Personal tax planning and compliance for individuals and professionals.', 'features' => ['Personal Tax Returns', 'Tax Planning', 'Investment Tax', 'Property Tax']],
+                    ['icon' => 'fas fa-file-invoice', 'title' => 'Sales Tax', 'description' => 'Specialized services for sales tax, federal excise duty, and customs matters.', 'features' => ['Sales Tax Registration', 'Sales Tax Returns submission', '⁠⁠Invoice Management', 'Stock Portfolio Management']],
+                    ['icon' => 'fas fa-globe', 'title' => 'Punjab Service Tax (PRA)', 'description' => 'Expert guidance on cross-border tax matters and international business.', 'features' => ['Transfer Pricing', 'Double Taxation', 'Foreign Investment', 'International Compliance']],
+                    ['icon' => 'fas fa-building', 'title' => 'Corporate Tax', 'description' => 'Comprehensive corporate tax solutions for businesses of all sizes.', 'features' => ['Corporate Structuring', 'Tax Optimization', 'Audit Support', 'Compliance Management']],
                     ['icon' => 'fas fa-gavel', 'title' => 'Litigation Services', 'description' => 'Preserve and protect your constitutional and legal rights through effective litigation in tax courts.', 'features' => ['Tax Appeals', 'Constitutional Petitions', 'High Court Representation', 'Supreme Court Cases']],
                     ['icon' => 'fas fa-calculator', 'title' => 'Tax Compliance', 'description' => 'Ensure timely and accurate fulfillment of all tax obligations under applicable laws.', 'features' => ['Tax Returns Filing', 'Compliance Audits', 'Tax Planning', 'Regulatory Compliance']],
                     ['icon' => 'fas fa-lightbulb', 'title' => 'Advisory Services', 'description' => 'Clear and creative tax advice for transactions, controversies, and legislation.', 'features' => ['Tax Strategy', 'Business Structuring', 'International Tax', 'Corporate Tax']],
-                    ['icon' => 'fas fa-shield-alt', 'title' => 'Retainer Services', 'description' => 'Ongoing priority consultancy and day-to-day tax advisory for businesses.', 'features' => ['Monthly Retainers', 'Priority Support', 'Regular Consultations', 'Emergency Assistance']],
-                    ['icon' => 'fas fa-building', 'title' => 'Corporate Tax', 'description' => 'Comprehensive corporate tax solutions for businesses of all sizes.', 'features' => ['Corporate Structuring', 'Tax Optimization', 'Audit Support', 'Compliance Management']],
-                    ['icon' => 'fas fa-globe', 'title' => 'International Taxation', 'description' => 'Expert guidance on cross-border tax matters and international business.', 'features' => ['Transfer Pricing', 'Double Taxation', 'Foreign Investment', 'International Compliance']],
-                    ['icon' => 'fas fa-file-invoice', 'title' => 'Sales Tax & Customs', 'description' => 'Specialized services for sales tax, federal excise duty, and customs matters.', 'features' => ['Sales Tax Registration', 'Customs Clearance', 'Excise Duty', 'Import/Export Tax']],
-                    ['icon' => 'fas fa-user-tie', 'title' => 'Individual Tax', 'description' => 'Personal tax planning and compliance for individuals and professionals.', 'features' => ['Personal Tax Returns', 'Tax Planning', 'Investment Tax', 'Property Tax']]
+                    ['icon' => 'fas fa-shield-alt', 'title' => 'Import Export (PSW)', 'description' => 'Ongoing priority consultancy and day-to-day tax advisory for businesses.', 'features' => ['⁠Import Export Registration', '⁠⁠Import Export Certificate', '⁠⁠Import Export Tax', 'Hassle-free transition']],
                 ];
 
                 foreach ($services as $service): ?>
                     <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6 group">
-                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
-                            <i class="<?php echo $service['icon']; ?> text-blue-600 text-xl"></i>
+                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+                            <i class="<?php echo $service['icon']; ?> text-purple-600 text-xl"></i>
                         </div>
                         
                         <h3 class="text-xl font-semibold mb-3 text-gray-900">
@@ -159,7 +160,7 @@ require_once 'includes/db.sqlite.php';
                         <ul class="space-y-2">
                             <?php foreach ($service['features'] as $feature): ?>
                                 <li class="flex items-center text-sm text-gray-500">
-                                    <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                    <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                                     <?php echo $feature; ?>
                                 </li>
                             <?php endforeach; ?>
@@ -172,7 +173,7 @@ require_once 'includes/db.sqlite.php';
                 <p class="text-lg text-gray-600 mb-6">
                     Need a specific service or have questions? Get in touch for a free consultation.
                 </p>
-                <a href="contact.php" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+                <a href="<?php echo MEETING_LINK; ?>" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
                     Get Free Consultation
                 </a>
             </div>
@@ -185,11 +186,11 @@ require_once 'includes/db.sqlite.php';
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                        Why Choose <span class="bg-gradient-to-r from-blue-600 to-yellow-500 bg-clip-text text-transparent">eTax consultants</span>
+                        Why Choose <span class="bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent"><?php echo SITE_NAME; ?></span>
                     </h2>
                     
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        eTax consultants has been at the forefront of tax consultancy in Pakistan for over two decades. 
+                        <?php echo SITE_NAME; ?> has been at the forefront of tax consultancy in Pakistan for over two decades. 
                         Our team combines deep legal expertise with practical business understanding to deliver 
                         exceptional results for our clients.
                     </p>
@@ -210,8 +211,8 @@ require_once 'includes/db.sqlite.php';
 
                         foreach ($features as $feature): ?>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="<?php echo $feature['icon']; ?> text-blue-600 text-sm"></i>
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="<?php echo $feature['icon']; ?> text-purple-600 text-sm"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-1"><?php echo $feature['title']; ?></h4>
@@ -228,33 +229,33 @@ require_once 'includes/db.sqlite.php';
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Client Testimonial</h3>
                             <div class="flex justify-center mb-4">
                                 <?php for ($i = 0; $i < 5; $i++): ?>
-                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-green-500"></i>
                                 <?php endfor; ?>
                             </div>
                         </div>
                         
                         <blockquote class="text-gray-600 italic mb-6 leading-relaxed">
-                            "eTax consultants always offers effective solutions to complex legal issues. Their forte is their 
+                            "<?php echo SITE_NAME; ?> always offers effective solutions to complex legal issues. Their forte is their 
                             speed and swift response. We believe that they are the finest lawyers a litigant can find 
                             in our legal system."
                         </blockquote>
                         
                         <div class="text-center">
-                            <div class="font-semibold text-gray-900">Zaheer Allana</div>
-                            <div class="text-sm text-gray-500">Bin Qasim (Pvt) Ltd.</div>
+                            <div class="font-semibold text-gray-900">Abdul Raheem</div>
+                            <div class="text-sm text-gray-500">ARHEX Labs</div>
                         </div>
                     </div>
                     
                     <!-- Decorative elements -->
-                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-200 rounded-full opacity-20"></div>
-                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow-200 rounded-full opacity-20"></div>
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-purple-200 rounded-full opacity-20"></div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-green-200 rounded-full opacity-20"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white relative overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute inset-0">
             <div class="absolute top-0 left-0 w-full h-full bg-black/10"></div>
@@ -265,16 +266,16 @@ require_once 'includes/db.sqlite.php';
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                    Get <span class="text-yellow-300">FREE</span> Tax Advice Today!
+                    Get <span class="text-green-300">FREE</span> Tax Advice Today!
                 </h2>
                 
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-                    eTax consultants offers you FREE consultation with our principal advocate to help you make 
+                <p class="text-xl md:text-2xl text-purple-100 mb-8 leading-relaxed">
+                    <?php echo SITE_NAME; ?> offers you FREE consultation with our principal advocate to help you make 
                     informed legal decisions! No problem is too great!
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <a href="contact.php" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg group">
+                    <a href="contact.php" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg group">
                         Get Free Advice!
                         <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -289,7 +290,7 @@ require_once 'includes/db.sqlite.php';
                             <i class="fas fa-phone text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Call Us Now</h3>
-                        <p class="text-blue-100">+92 21 3582 1757</p>
+                        <p class="text-purple-100"><?php echo SITE_PHONE; ?></p>
                     </div>
                     
                     <div class="flex flex-col items-center text-center">
@@ -297,7 +298,7 @@ require_once 'includes/db.sqlite.php';
                             <i class="fas fa-envelope text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Email Us</h3>
-                        <p class="text-blue-100">info@etaxconsultants.org</p>
+                        <p class="text-purple-100"><?php echo SITE_EMAIL; ?></p>
                     </div>
                     
                     <div class="flex flex-col items-center text-center">
@@ -305,7 +306,7 @@ require_once 'includes/db.sqlite.php';
                             <i class="fas fa-clock text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
-                        <p class="text-blue-100">Always Available</p>
+                        <p class="text-purple-100">Always Available</p>
                     </div>
                 </div>
             </div>

@@ -91,22 +91,23 @@ $categories = $db->fetchAll(
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories - Dashboard - eTax consultants Pakistan</title>
+    <title>Categories - Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
@@ -120,7 +121,7 @@ $categories = $db->fetchAll(
                     <i class="fas fa-newspaper mr-3"></i>
                     Blog Posts
                 </a>
-                <a href="categories.php" class="flex items-center px-4 py-3 text-gray-700 bg-blue-50 border-r-4 border-blue-600 rounded-r-lg">
+                <a href="categories.php" class="flex items-center px-4 py-3 text-gray-700 bg-purple-50 border-r-4 border-purple-600 rounded-r-lg">
                     <i class="fas fa-tags mr-3"></i>
                     Categories
                 </a>
@@ -151,12 +152,12 @@ $categories = $db->fetchAll(
             <div class="flex items-center justify-between px-6 py-4">
                 <h1 class="text-2xl font-semibold text-gray-900">Categories</h1>
                 <div class="flex items-center space-x-4">
-                    <button onclick="openAddModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    <button onclick="openAddModal()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                         <i class="fas fa-plus mr-2"></i>Add Category
                     </button>
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -165,7 +166,7 @@ $categories = $db->fetchAll(
         <!-- Content -->
         <div class="p-6">
             <?php if ($success): ?>
-                <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded-lg mb-6">
                     <?php echo htmlspecialchars($success); ?>
                 </div>
             <?php endif; ?>
@@ -180,7 +181,7 @@ $categories = $db->fetchAll(
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-tags text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -192,7 +193,7 @@ $categories = $db->fetchAll(
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-green-100 text-green-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-newspaper text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -204,7 +205,7 @@ $categories = $db->fetchAll(
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                        <div class="p-3 rounded-full bg-green-100 text-green-600">
                             <i class="fas fa-chart-bar text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -264,7 +265,7 @@ $categories = $db->fetchAll(
                                             <?php echo htmlspecialchars(truncateText($category['description'], 50)); ?>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium <?php echo $category['post_count'] > 0 ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'; ?>">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium <?php echo $category['post_count'] > 0 ? 'bg-purple-100 text-purple-800' : 'bg-gray-100 text-gray-800'; ?>">
                                                 <?php echo $category['post_count']; ?> posts
                                             </span>
                                         </td>
@@ -273,7 +274,7 @@ $categories = $db->fetchAll(
                                         </td>
                                         <td class="px-6 py-4 text-sm font-medium">
                                             <div class="flex items-center space-x-2">
-                                                <button onclick="openEditModal(<?php echo htmlspecialchars(json_encode($category)); ?>)" class="text-blue-600 hover:text-blue-900">
+                                                <button onclick="openEditModal(<?php echo htmlspecialchars(json_encode($category)); ?>)" class="text-purple-600 hover:text-purple-900">
                                                     <i class="fas fa-edit"></i>
                                                 </button>
                                                 
@@ -312,19 +313,19 @@ $categories = $db->fetchAll(
                     
                     <div class="mb-4">
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Category Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-6">
                         <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Description</label>
-                        <textarea id="description" name="description" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        <textarea id="description" name="description" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
                     </div>
                     
                     <div class="flex justify-end space-x-3">
                         <button type="button" onclick="closeAddModal()" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
                             Add Category
                         </button>
                     </div>
@@ -344,19 +345,19 @@ $categories = $db->fetchAll(
                     
                     <div class="mb-4">
                         <label for="edit_name" class="block text-sm font-medium text-gray-700 mb-2">Category Name</label>
-                        <input type="text" id="edit_name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="edit_name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-6">
                         <label for="edit_description" class="block text-sm font-medium text-gray-700 mb-2">Description</label>
-                        <textarea id="edit_description" name="description" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        <textarea id="edit_description" name="description" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
                     </div>
                     
                     <div class="flex justify-end space-x-3">
                         <button type="button" onclick="closeEditModal()" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
                             Update Category
                         </button>
                     </div>

@@ -99,10 +99,10 @@ INSERT INTO categories (name, slug, description) VALUES
 
 -- Insert default settings
 INSERT INTO settings (setting_key, setting_value, description) VALUES
-('site_name', 'eTax consultants Pakistan', 'Website name'),
+('site_name', 'eTax Consultants Pakistan', 'Website name'),
 ('site_description', 'Pakistan\'s leading tax consultancy firm', 'Website description'),
 ('site_email', 'info@etaxconsultants.org', 'Main contact email'),
-('site_phone', '+92 21 3582 1757', 'Main contact phone'),
+('site_phone', '+92 61 651 3692', 'Main contact phone'),
 ('posts_per_page', '6', 'Number of blog posts per page'),
 ('allow_comments', '1', 'Allow comments on blog posts'),
 ('maintenance_mode', '0', 'Maintenance mode status');

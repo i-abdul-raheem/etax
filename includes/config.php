@@ -6,10 +6,13 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // Site configuration
-define('SITE_NAME', 'eTax consultants Pakistan');
+define('SITE_NAME', 'eTax Consultants');
 define('SITE_URL', 'http://localhost/taxpulse');
 define('SITE_EMAIL', 'info@etaxconsultants.org');
-define('SITE_PHONE', '+92 21 3582 1757');
+define('SITE_PHONE', '+92 61 651 3692');
+define('MEETING_LINK', 'https://calendly.com/etaxconsultants-org/30min');
+define('COMPANY_ADDRESS', "Office 4, M.A Jinnah Road, Opposite PSIC Society gate, Nigana Chowk, Multan");
+
 
 // Blog configuration
 define('POSTS_PER_PAGE', 6);

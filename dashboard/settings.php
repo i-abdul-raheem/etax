@@ -145,22 +145,23 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - Dashboard - eTax consultants Pakistan</title>
+    <title>Settings - Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
@@ -182,7 +183,7 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                     <i class="fas fa-users mr-3"></i>
                     Users
                 </a>
-                <a href="settings.php" class="flex items-center px-4 py-3 text-gray-700 bg-blue-50 border-r-4 border-blue-600 rounded-r-lg">
+                <a href="settings.php" class="flex items-center px-4 py-3 text-gray-700 bg-purple-50 border-r-4 border-purple-600 rounded-r-lg">
                     <i class="fas fa-cog mr-3"></i>
                     Settings
                 </a>
@@ -206,8 +207,8 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                 <h1 class="text-2xl font-semibold text-gray-900">Settings</h1>
                 <div class="flex items-center space-x-4">
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -216,7 +217,7 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
         <!-- Content -->
         <div class="p-6">
             <?php if ($success): ?>
-                <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded-lg mb-6">
                     <?php echo htmlspecialchars($success); ?>
                 </div>
             <?php endif; ?>
@@ -230,7 +231,7 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
             <!-- Settings Tabs -->
             <div class="mb-6">
                 <nav class="flex space-x-8">
-                    <button onclick="showTab('site')" id="site-tab" class="py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
+                    <button onclick="showTab('site')" id="site-tab" class="py-2 px-1 border-b-2 border-purple-500 font-medium text-sm text-purple-600">
                         Site Settings
                     </button>
                     <button onclick="showTab('blog')" id="blog-tab" class="py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
@@ -260,32 +261,32 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="site_name" class="block text-sm font-medium text-gray-700 mb-2">Site Name</label>
-                                    <input type="text" id="site_name" name="site_name" value="<?php echo htmlspecialchars($settings['site_name'] ?? 'eTax consultants Pakistan'); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" id="site_name" name="site_name" value="<?php echo htmlspecialchars($settings['site_name'] ?? SITE_NAME + ' Pakistan'); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="contact_email" class="block text-sm font-medium text-gray-700 mb-2">Contact Email</label>
-                                    <input type="email" id="contact_email" name="contact_email" value="<?php echo htmlspecialchars($settings['contact_email'] ?? 'info@etaxconsultants.org'); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="email" id="contact_email" name="contact_email" value="<?php echo htmlspecialchars($settings['contact_email'] ?? SITE_EMAIL); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="contact_phone" class="block text-sm font-medium text-gray-700 mb-2">Contact Phone</label>
-                                    <input type="text" id="contact_phone" name="contact_phone" value="<?php echo htmlspecialchars($settings['contact_phone'] ?? '+92-51-1234567'); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" id="contact_phone" name="contact_phone" value="<?php echo htmlspecialchars($settings['contact_phone'] ?? SITE_PHONE); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="site_description" class="block text-sm font-medium text-gray-700 mb-2">Site Description</label>
-                                    <input type="text" id="site_description" name="site_description" value="<?php echo htmlspecialchars($settings['site_description'] ?? 'Leading Tax Consultancy Services in Pakistan'); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" id="site_description" name="site_description" value="<?php echo htmlspecialchars($settings['site_description'] ?? 'Leading Tax Consultancy Services in Pakistan'); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                             </div>
                             
                             <div class="mt-6">
                                 <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Office Address</label>
-                                <textarea id="address" name="address" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"><?php echo htmlspecialchars($settings['address'] ?? 'Suite 123, Blue Area, Islamabad, Pakistan'); ?></textarea>
+                                <textarea id="address" name="address" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"><?php echo htmlspecialchars($settings['address'] ?? 'Suite 123, Blue Area, Islamabad, Pakistan'); ?></textarea>
                             </div>
                             
                             <div class="mt-6">
-                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                                     <i class="fas fa-save mr-2"></i>Save Site Settings
                                 </button>
                             </div>
@@ -309,12 +310,12 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="posts_per_page" class="block text-sm font-medium text-gray-700 mb-2">Posts Per Page</label>
-                                    <input type="number" id="posts_per_page" name="posts_per_page" value="<?php echo htmlspecialchars($settings['posts_per_page'] ?? '10'); ?>" min="1" max="50" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="number" id="posts_per_page" name="posts_per_page" value="<?php echo htmlspecialchars($settings['posts_per_page'] ?? '10'); ?>" min="1" max="50" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="default_category" class="block text-sm font-medium text-gray-700 mb-2">Default Category</label>
-                                    <select id="default_category" name="default_category" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <select id="default_category" name="default_category" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                         <option value="">Select Category</option>
                                         <?php foreach ($categories as $category): ?>
                                             <option value="<?php echo htmlspecialchars($category['name']); ?>" <?php echo ($settings['default_category'] ?? '') === $category['name'] ? 'selected' : ''; ?>>
@@ -327,18 +328,18 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                             
                             <div class="mt-6 space-y-4">
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="allow_comments" name="allow_comments" <?php echo ($settings['allow_comments'] ?? '1') ? 'checked' : ''; ?> class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    <input type="checkbox" id="allow_comments" name="allow_comments" <?php echo ($settings['allow_comments'] ?? '1') ? 'checked' : ''; ?> class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
                                     <label for="allow_comments" class="ml-2 block text-sm text-gray-900">Allow comments on blog posts</label>
                                 </div>
                                 
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="moderate_comments" name="moderate_comments" <?php echo ($settings['moderate_comments'] ?? '1') ? 'checked' : ''; ?> class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    <input type="checkbox" id="moderate_comments" name="moderate_comments" <?php echo ($settings['moderate_comments'] ?? '1') ? 'checked' : ''; ?> class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
                                     <label for="moderate_comments" class="ml-2 block text-sm text-gray-900">Moderate comments before publishing</label>
                                 </div>
                             </div>
                             
                             <div class="mt-6">
-                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                                     <i class="fas fa-save mr-2"></i>Save Blog Settings
                                 </button>
                             </div>
@@ -362,32 +363,32 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="facebook" class="block text-sm font-medium text-gray-700 mb-2">Facebook URL</label>
-                                    <input type="url" id="facebook" name="facebook" value="<?php echo htmlspecialchars($settings['facebook'] ?? ''); ?>" placeholder="https://facebook.com/yourpage" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="url" id="facebook" name="facebook" value="<?php echo htmlspecialchars($settings['facebook'] ?? ''); ?>" placeholder="https://facebook.com/yourpage" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="twitter" class="block text-sm font-medium text-gray-700 mb-2">Twitter URL</label>
-                                    <input type="url" id="twitter" name="twitter" value="<?php echo htmlspecialchars($settings['twitter'] ?? ''); ?>" placeholder="https://twitter.com/yourhandle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="url" id="twitter" name="twitter" value="<?php echo htmlspecialchars($settings['twitter'] ?? ''); ?>" placeholder="https://twitter.com/yourhandle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="linkedin" class="block text-sm font-medium text-gray-700 mb-2">LinkedIn URL</label>
-                                    <input type="url" id="linkedin" name="linkedin" value="<?php echo htmlspecialchars($settings['linkedin'] ?? ''); ?>" placeholder="https://linkedin.com/company/yourcompany" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="url" id="linkedin" name="linkedin" value="<?php echo htmlspecialchars($settings['linkedin'] ?? ''); ?>" placeholder="https://linkedin.com/company/yourcompany" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="instagram" class="block text-sm font-medium text-gray-700 mb-2">Instagram URL</label>
-                                    <input type="url" id="instagram" name="instagram" value="<?php echo htmlspecialchars($settings['instagram'] ?? ''); ?>" placeholder="https://instagram.com/yourprofile" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="url" id="instagram" name="instagram" value="<?php echo htmlspecialchars($settings['instagram'] ?? ''); ?>" placeholder="https://instagram.com/yourprofile" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                                 
                                 <div>
                                     <label for="youtube" class="block text-sm font-medium text-gray-700 mb-2">YouTube URL</label>
-                                    <input type="url" id="youtube" name="youtube" value="<?php echo htmlspecialchars($settings['youtube'] ?? ''); ?>" placeholder="https://youtube.com/yourchannel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="url" id="youtube" name="youtube" value="<?php echo htmlspecialchars($settings['youtube'] ?? ''); ?>" placeholder="https://youtube.com/yourchannel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 </div>
                             </div>
                             
                             <div class="mt-6">
-                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                                     <i class="fas fa-save mr-2"></i>Save Social Media Settings
                                 </button>
                             </div>
@@ -437,19 +438,19 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
                         <div class="p-6 space-y-4">
                             <form method="POST" class="inline">
                                 <input type="hidden" name="action" value="clear_cache">
-                                <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
                                     <i class="fas fa-broom mr-2"></i>Clear Cache
                                 </button>
                             </form>
                             
                             <form method="POST" class="inline">
                                 <input type="hidden" name="action" value="backup_database">
-                                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                                     <i class="fas fa-download mr-2"></i>Backup Database
                                 </button>
                             </form>
                             
-                            <a href="../setup.php" target="_blank" class="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-center">
+                            <a href="../setup.php" target="_blank" class="block w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-center">
                                 <i class="fas fa-tools mr-2"></i>Database Setup
                             </a>
                         </div>
@@ -468,7 +469,7 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
         // Remove active state from all tabs
         const tabs = document.querySelectorAll('[id$="-tab"]');
         tabs.forEach(tab => {
-            tab.classList.remove('border-blue-500', 'text-blue-600');
+            tab.classList.remove('border-purple-500', 'text-purple-600');
             tab.classList.add('border-transparent', 'text-gray-500');
         });
         
@@ -477,7 +478,7 @@ $categories = $db->fetchAll("SELECT name FROM categories ORDER BY name");
         
         // Activate selected tab
         document.getElementById(tabName + '-tab').classList.remove('border-transparent', 'text-gray-500');
-        document.getElementById(tabName + '-tab').classList.add('border-blue-500', 'text-blue-600');
+        document.getElementById(tabName + '-tab').classList.add('border-purple-500', 'text-purple-600');
     }
     
     // Show site tab by default

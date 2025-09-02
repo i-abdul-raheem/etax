@@ -60,22 +60,23 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts - Dashboard - eTax consultants Pakistan</title>
+    <title>Blog Posts - Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
@@ -85,7 +86,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
-                <a href="posts.php" class="flex items-center px-4 py-3 text-gray-700 bg-blue-50 border-r-4 border-blue-600 rounded-r-lg">
+                <a href="posts.php" class="flex items-center px-4 py-3 text-gray-700 bg-purple-50 border-r-4 border-purple-600 rounded-r-lg">
                     <i class="fas fa-newspaper mr-3"></i>
                     Blog Posts
                 </a>
@@ -120,12 +121,12 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
             <div class="flex items-center justify-between px-6 py-4">
                 <h1 class="text-2xl font-semibold text-gray-900">Blog Posts</h1>
                 <div class="flex items-center space-x-4">
-                    <a href="create-post.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    <a href="create-post.php" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                         <i class="fas fa-plus mr-2"></i>New Post
                     </a>
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -134,7 +135,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
         <!-- Content -->
         <div class="p-6">
             <?php if ($success): ?>
-                <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded-lg mb-6">
                     <?php echo htmlspecialchars($success); ?>
                 </div>
             <?php endif; ?>
@@ -149,7 +150,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-newspaper text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -161,7 +162,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-green-100 text-green-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-check-circle text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -173,7 +174,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                        <div class="p-3 rounded-full bg-green-100 text-green-600">
                             <i class="fas fa-edit text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -238,7 +239,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                                                 </div>
                                                 <div class="ml-4">
                                                     <div class="text-sm font-medium text-gray-900">
-                                                        <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="hover:text-blue-600">
+                                                        <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="hover:text-purple-600">
                                                             <?php echo htmlspecialchars($post['title']); ?>
                                                         </a>
                                                     </div>
@@ -252,15 +253,15 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                                             <?php echo htmlspecialchars($post['author'] ?? 'Unknown'); ?>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
                                                 <?php echo htmlspecialchars($post['category']); ?>
                                             </span>
                                         </td>
                                         <td class="px-6 py-4">
                                             <?php
                                             $statusColors = [
-                                                'published' => 'bg-green-100 text-green-800',
-                                                'draft' => 'bg-yellow-100 text-yellow-800',
+                                                'published' => 'bg-purple-100 text-purple-800',
+                                                'draft' => 'bg-green-100 text-green-800',
                                                 'archived' => 'bg-gray-100 text-gray-800'
                                             ];
                                             $statusColor = $statusColors[$post['status']] ?? 'bg-gray-100 text-gray-800';
@@ -277,16 +278,16 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                                         </td>
                                         <td class="px-6 py-4 text-sm font-medium">
                                             <div class="flex items-center space-x-2">
-                                                <a href="edit-post.php?id=<?php echo $post['id']; ?>" class="text-blue-600 hover:text-blue-900">
+                                                <a href="edit-post.php?id=<?php echo $post['id']; ?>" class="text-purple-600 hover:text-purple-900">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="text-green-600 hover:text-green-900">
+                                                <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="text-purple-600 hover:text-purple-900">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
                                                 
                                                 <!-- Status Change Dropdown -->
                                                 <div class="relative inline-block text-left">
-                                                    <button type="button" class="text-yellow-600 hover:text-yellow-900" onclick="toggleStatusMenu(<?php echo $post['id']; ?>)">
+                                                    <button type="button" class="text-green-600 hover:text-green-900" onclick="toggleStatusMenu(<?php echo $post['id']; ?>)">
                                                         <i class="fas fa-cog"></i>
                                                     </button>
                                                     <div id="statusMenu<?php echo $post['id']; ?>" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
@@ -348,7 +349,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts ORDER BY c
                                 <div>
                                     <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
                                         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                            <a href="?page=<?php echo $i; ?>" class="relative inline-flex items-center px-4 py-2 border text-sm font-medium <?php echo $i == $page ? 'z-10 bg-blue-50 border-blue-500 text-blue-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'; ?>">
+                                            <a href="?page=<?php echo $i; ?>" class="relative inline-flex items-center px-4 py-2 border text-sm font-medium <?php echo $i == $page ? 'z-10 bg-purple-50 border-purple-500 text-purple-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'; ?>">
                                                 <?php echo $i; ?>
                                             </a>
                                         <?php endfor; ?>

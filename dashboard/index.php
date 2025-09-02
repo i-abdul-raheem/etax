@@ -30,28 +30,29 @@ $recentActivities = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - eTax consultants Pakistan</title>
+    <title>Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
         <nav class="mt-8">
             <div class="px-4 space-y-2">
-                <a href="index.php" class="flex items-center px-4 py-3 text-gray-700 bg-blue-50 border-r-4 border-blue-600 rounded-r-lg">
+                <a href="index.php" class="flex items-center px-4 py-3 text-gray-700 bg-purple-50 border-r-4 border-purple-600 rounded-r-lg">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
@@ -91,8 +92,8 @@ $recentActivities = [
                 <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
                 <div class="flex items-center space-x-4">
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -104,7 +105,7 @@ $recentActivities = [
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-newspaper text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -116,7 +117,7 @@ $recentActivities = [
 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-green-100 text-green-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-check-circle text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -128,7 +129,7 @@ $recentActivities = [
 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                        <div class="p-3 rounded-full bg-green-100 text-green-600">
                             <i class="fas fa-edit text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -158,10 +159,10 @@ $recentActivities = [
                 </div>
                 <div class="p-6">
                     <div class="flex flex-wrap gap-4">
-                        <a href="posts.php?action=new" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                        <a href="posts.php?action=new" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                             <i class="fas fa-plus mr-2"></i>New Post
                         </a>
-                        <a href="categories.php?action=new" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+                        <a href="categories.php?action=new" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                             <i class="fas fa-tag mr-2"></i>New Category
                         </a>
                         <a href="users.php?action=new" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
@@ -189,7 +190,7 @@ $recentActivities = [
                                     <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                         <div class="flex-1">
                                             <h3 class="font-medium text-gray-900">
-                                                <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="hover:text-blue-600">
+                                                <a href="../post.php?slug=<?php echo $post['slug']; ?>" target="_blank" class="hover:text-purple-600">
                                                     <?php echo htmlspecialchars($post['title']); ?>
                                                 </a>
                                             </h3>
@@ -200,7 +201,7 @@ $recentActivities = [
                                         </div>
                                         <div class="flex space-x-2">
                                             <a href="posts.php?action=edit&id=<?php echo $post['id']; ?>" 
-                                               class="text-blue-600 hover:text-blue-700">
+                                               class="text-purple-600 hover:text-purple-700">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <a href="posts.php?action=delete&id=<?php echo $post['id']; ?>" 
@@ -213,7 +214,7 @@ $recentActivities = [
                                 <?php endforeach; ?>
                             </div>
                             <div class="mt-4 text-center">
-                                <a href="posts.php" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                                <a href="posts.php" class="text-purple-600 hover:text-purple-700 text-sm font-medium">
                                     View All Posts <i class="fas fa-arrow-right ml-1"></i>
                                 </a>
                             </div>
@@ -230,7 +231,7 @@ $recentActivities = [
                         <div class="space-y-4">
                             <?php foreach ($recentActivities as $activity): ?>
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <div class="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
                                     <div class="flex-1">
                                         <p class="text-sm text-gray-900"><?php echo $activity['message']; ?></p>
                                         <p class="text-xs text-gray-500"><?php echo $activity['time']; ?></p>

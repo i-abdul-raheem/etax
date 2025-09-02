@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Back to top button
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopBtn.className = 'fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 pointer-events-none z-50';
+    backToTopBtn.className = 'fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 opacity-0 pointer-events-none z-50';
     document.body.appendChild(backToTopBtn);
 
     window.addEventListener('scroll', function() {
@@ -170,9 +170,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create notification element
         const notification = document.createElement('div');
         notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300 ${
-            type === 'success' ? 'bg-green-500 text-white' :
+            type === 'success' ? 'bg-purple-500 text-white' :
             type === 'error' ? 'bg-red-500 text-white' :
-            'bg-blue-500 text-white'
+            'bg-purple-500 text-white'
         }`;
         
         notification.innerHTML = `

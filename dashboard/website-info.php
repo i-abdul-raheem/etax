@@ -6,7 +6,7 @@ include_once '../includes/header.php';
 $stmt = $pdo->query("SELECT * FROM website_info ORDER BY id DESC LIMIT 1");
 $info = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$site_name = $info['site_name'] ?? 'eTax consultants';
+$site_name = $info['site_name'] ?? SITE_NAME;
 $contact_email = $info['contact_email'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

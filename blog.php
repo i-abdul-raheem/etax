@@ -46,26 +46,27 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - eTax consultants Pakistan</title>
-    <meta name="description" content="Latest tax news, updates, and insights from eTax consultants Pakistan. Stay informed about tax laws, regulations, and best practices.">
+    <title>Blog - <?php echo SITE_NAME; ?> Pakistan</title>
+    <meta name="description" content="Latest tax news, updates, and insights from <?php echo SITE_NAME; ?> Pakistan. Stay informed about tax laws, regulations, and best practices.">
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="font-sans antialiased">
     <!-- Header -->
     <?php include 'includes/header.php'; ?>
 
     <!-- Page Header -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <section class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                Tax <span class="text-yellow-300">Blog</span>
+                Tax <span class="text-green-300">Blog</span>
             </h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p class="text-xl text-purple-100 max-w-3xl mx-auto">
                 Stay updated with the latest tax news, regulations, and insights from our expert team. 
                 Get valuable information to help you make informed decisions.
             </p>
@@ -84,7 +85,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                             name="search" 
                             value="<?php echo htmlspecialchars($search); ?>"
                             placeholder="Search blog posts..." 
-                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         >
                         <button type="submit" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <i class="fas fa-search"></i>
@@ -99,7 +100,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                         id="category" 
                         name="category" 
                         onchange="filterByCategory(this.value)"
-                        class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                         <option value="">All Categories</option>
                         <?php foreach ($categories as $cat): ?>
@@ -129,7 +130,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                         <?php endif; ?>
                     </p>
                     <?php if ($search || $category): ?>
-                        <a href="blog.php" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                        <a href="blog.php" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
                             View All Posts
                         </a>
                     <?php endif; ?>
@@ -148,7 +149,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                             
                             <div class="p-6">
                                 <div class="flex items-center gap-2 mb-3">
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                                    <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">
                                         <?php echo htmlspecialchars($post['category']); ?>
                                     </span>
                                     <span class="text-sm text-gray-500">
@@ -158,7 +159,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                                 
                                 <h2 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                                     <a href="post.php?slug=<?php echo $post['slug']; ?>" 
-                                       class="hover:text-blue-600 transition-colors">
+                                       class="hover:text-purple-600 transition-colors">
                                         <?php echo htmlspecialchars($post['title']); ?>
                                     </a>
                                 </h2>
@@ -174,7 +175,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                                     </div>
                                     
                                     <a href="post.php?slug=<?php echo $post['slug']; ?>" 
-                                       class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
+                                       class="text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors">
                                         Read More <i class="fas fa-arrow-right ml-1"></i>
                                     </a>
                                 </div>
@@ -196,7 +197,7 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                             
                             <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                                 <?php if ($i == $page): ?>
-                                    <span class="px-3 py-2 bg-blue-600 text-white rounded-lg">
+                                    <span class="px-3 py-2 bg-purple-600 text-white rounded-lg">
                                         <?php echo $i; ?>
                                     </span>
                                 <?php else: ?>
@@ -236,9 +237,9 @@ $categories = $db->fetchAll("SELECT DISTINCT category FROM blog_posts WHERE stat
                     name="email" 
                     placeholder="Enter your email address" 
                     required
-                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 >
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
                     Subscribe
                 </button>
             </form>

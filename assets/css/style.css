@@ -214,11 +214,11 @@
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .bg-blue-600 {
+    .bg-purple-600 {
         background-color: #1e40af !important;
     }
     
-    .text-blue-600 {
+    .text-purple-600 {
         color: #1e40af !important;
     }
 }

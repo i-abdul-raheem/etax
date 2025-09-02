@@ -132,22 +132,23 @@ $users = $db->fetchAll(
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users - Dashboard - eTax consultants Pakistan</title>
+    <title>Users - Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
@@ -165,7 +166,7 @@ $users = $db->fetchAll(
                     <i class="fas fa-tags mr-3"></i>
                     Categories
                 </a>
-                <a href="users.php" class="flex items-center px-4 py-3 text-gray-700 bg-blue-50 border-r-4 border-blue-600 rounded-r-lg">
+                <a href="users.php" class="flex items-center px-4 py-3 text-gray-700 bg-purple-50 border-r-4 border-purple-600 rounded-r-lg">
                     <i class="fas fa-users mr-3"></i>
                     Users
                 </a>
@@ -192,12 +193,12 @@ $users = $db->fetchAll(
             <div class="flex items-center justify-between px-6 py-4">
                 <h1 class="text-2xl font-semibold text-gray-900">Users</h1>
                 <div class="flex items-center space-x-4">
-                    <button onclick="openAddModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    <button onclick="openAddModal()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                         <i class="fas fa-plus mr-2"></i>Add User
                     </button>
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -206,7 +207,7 @@ $users = $db->fetchAll(
         <!-- Content -->
         <div class="p-6">
             <?php if ($success): ?>
-                <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded-lg mb-6">
                     <?php echo htmlspecialchars($success); ?>
                 </div>
             <?php endif; ?>
@@ -221,7 +222,7 @@ $users = $db->fetchAll(
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-users text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -233,7 +234,7 @@ $users = $db->fetchAll(
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-green-100 text-green-600">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600">
                             <i class="fas fa-user-shield text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -245,7 +246,7 @@ $users = $db->fetchAll(
                 
                 <div class="bg-white rounded-lg shadow p-6">
                     <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                        <div class="p-3 rounded-full bg-green-100 text-green-600">
                             <i class="fas fa-user-edit text-xl"></i>
                         </div>
                         <div class="ml-4">
@@ -299,15 +300,15 @@ $users = $db->fetchAll(
                                         <td class="px-6 py-4">
                                             <div class="flex items-center">
                                                 <div class="flex-shrink-0 h-10 w-10">
-                                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                                        <i class="fas fa-user text-blue-600"></i>
+                                                    <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                                                        <i class="fas fa-user text-purple-600"></i>
                                                     </div>
                                                 </div>
                                                 <div class="ml-4">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         <?php echo htmlspecialchars($user['full_name']); ?>
                                                         <?php if ($user['id'] == $_SESSION['user_id']): ?>
-                                                            <span class="ml-2 text-xs text-blue-600">(You)</span>
+                                                            <span class="ml-2 text-xs text-purple-600">(You)</span>
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="text-sm text-gray-500">
@@ -323,8 +324,8 @@ $users = $db->fetchAll(
                                             <?php
                                             $roleColors = [
                                                 'admin' => 'bg-red-100 text-red-800',
-                                                'editor' => 'bg-blue-100 text-blue-800',
-                                                'author' => 'bg-green-100 text-green-800'
+                                                'editor' => 'bg-purple-100 text-purple-800',
+                                                'author' => 'bg-purple-100 text-purple-800'
                                             ];
                                             $roleColor = $roleColors[$user['role']] ?? 'bg-gray-100 text-gray-800';
                                             ?>
@@ -335,7 +336,7 @@ $users = $db->fetchAll(
                                         <td class="px-6 py-4">
                                             <?php
                                             $statusColors = [
-                                                'active' => 'bg-green-100 text-green-800',
+                                                'active' => 'bg-purple-100 text-purple-800',
                                                 'inactive' => 'bg-gray-100 text-gray-800'
                                             ];
                                             $statusColor = $statusColors[$user['status']] ?? 'bg-gray-100 text-gray-800';
@@ -352,11 +353,11 @@ $users = $db->fetchAll(
                                         </td>
                                         <td class="px-6 py-4 text-sm font-medium">
                                             <div class="flex items-center space-x-2">
-                                                <button onclick="openEditModal(<?php echo htmlspecialchars(json_encode($user)); ?>)" class="text-blue-600 hover:text-blue-900">
+                                                <button onclick="openEditModal(<?php echo htmlspecialchars(json_encode($user)); ?>)" class="text-purple-600 hover:text-purple-900">
                                                     <i class="fas fa-edit"></i>
                                                 </button>
                                                 
-                                                <button onclick="openPasswordModal(<?php echo $user['id']; ?>)" class="text-yellow-600 hover:text-yellow-900">
+                                                <button onclick="openPasswordModal(<?php echo $user['id']; ?>)" class="text-green-600 hover:text-green-900">
                                                     <i class="fas fa-key"></i>
                                                 </button>
                                                 
@@ -395,27 +396,27 @@ $users = $db->fetchAll(
                     
                     <div class="mb-4">
                         <label for="username" class="block text-sm font-medium text-gray-700 mb-2">Username</label>
-                        <input type="text" id="username" name="username" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="username" name="username" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-4">
                         <label for="full_name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                        <input type="text" id="full_name" name="full_name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="full_name" name="full_name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-4">
                         <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                        <input type="password" id="password" name="password" required minlength="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="password" id="password" name="password" required minlength="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-6">
                         <label for="role" class="block text-sm font-medium text-gray-700 mb-2">Role</label>
-                        <select id="role" name="role" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="role" name="role" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <option value="author">Author</option>
                             <option value="editor">Editor</option>
                             <option value="admin">Admin</option>
@@ -426,7 +427,7 @@ $users = $db->fetchAll(
                         <button type="button" onclick="closeAddModal()" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
                             Add User
                         </button>
                     </div>
@@ -451,17 +452,17 @@ $users = $db->fetchAll(
                     
                     <div class="mb-4">
                         <label for="edit_email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" id="edit_email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" id="edit_email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-4">
                         <label for="edit_full_name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                        <input type="text" id="edit_full_name" name="full_name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="edit_full_name" name="full_name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="mb-4">
                         <label for="edit_role" class="block text-sm font-medium text-gray-700 mb-2">Role</label>
-                        <select id="edit_role" name="role" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="edit_role" name="role" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <option value="author">Author</option>
                             <option value="editor">Editor</option>
                             <option value="admin">Admin</option>
@@ -470,7 +471,7 @@ $users = $db->fetchAll(
                     
                     <div class="mb-6">
                         <label for="edit_status" class="block text-sm font-medium text-gray-700 mb-2">Status</label>
-                        <select id="edit_status" name="status" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="edit_status" name="status" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <option value="active">Active</option>
                             <option value="inactive">Inactive</option>
                         </select>
@@ -480,7 +481,7 @@ $users = $db->fetchAll(
                         <button type="button" onclick="closeEditModal()" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
                             Update User
                         </button>
                     </div>
@@ -500,14 +501,14 @@ $users = $db->fetchAll(
                     
                     <div class="mb-6">
                         <label for="new_password" class="block text-sm font-medium text-gray-700 mb-2">New Password</label>
-                        <input type="password" id="new_password" name="new_password" required minlength="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="password" id="new_password" name="new_password" required minlength="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     </div>
                     
                     <div class="flex justify-end space-x-3">
                         <button type="button" onclick="closePasswordModal()" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
                             Change Password
                         </button>
                     </div>

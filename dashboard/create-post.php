@@ -78,7 +78,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post - Dashboard - eTax consultants Pakistan</title>
+    <title>Create Post - Dashboard - <?php echo SITE_NAME; ?> Pakistan</title>
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -88,16 +88,17 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
     <!-- SimpleMDE Markdown Editor -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="flex items-center justify-center h-16 bg-gradient-to-r from-purple-600 to-purple-800">
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
                     <i class="fas fa-gavel text-white"></i>
                 </div>
-                <span class="text-white font-bold text-lg">eTax consultants</span>
+                <span class="text-white font-bold text-lg"><?php echo SITE_NAME; ?></span>
             </div>
         </div>
         
@@ -146,8 +147,8 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                         <i class="fas fa-arrow-left mr-2"></i>Back to Posts
                     </a>
                     <span class="text-sm text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?></span>
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-blue-600"></i>
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-purple-600"></i>
                     </div>
                 </div>
             </div>
@@ -168,7 +169,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                         <!-- Title -->
                         <div class="bg-white rounded-lg shadow p-6">
                             <label for="title" class="block text-sm font-medium text-gray-700 mb-2">Post Title *</label>
-                            <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($_POST['title'] ?? ''); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg" placeholder="Enter your post title">
+                            <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($_POST['title'] ?? ''); ?>" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg" placeholder="Enter your post title">
                         </div>
 
                         <!-- Content Editor -->
@@ -188,7 +189,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                             <div class="space-y-4">
                                 <div>
                                     <label for="status" class="block text-sm font-medium text-gray-700 mb-2">Status</label>
-                                    <select id="status" name="status" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <select id="status" name="status" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                         <option value="draft" <?php echo ($_POST['status'] ?? 'draft') === 'draft' ? 'selected' : ''; ?>>Draft</option>
                                         <option value="published" <?php echo ($_POST['status'] ?? 'draft') === 'published' ? 'selected' : ''; ?>>Published</option>
                                     </select>
@@ -196,7 +197,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                                 
                                 <div>
                                     <label for="category" class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
-                                    <select id="category" name="category" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <select id="category" name="category" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                                         <option value="">Select Category</option>
                                         <?php foreach ($categories as $category): ?>
                                             <option value="<?php echo htmlspecialchars($category['name']); ?>" <?php echo ($_POST['category'] ?? '') === $category['name'] ? 'selected' : ''; ?>>
@@ -208,7 +209,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                                 
                                 <div>
                                     <label for="tags" class="block text-sm font-medium text-gray-700 mb-2">Tags</label>
-                                    <input type="text" id="tags" name="tags" value="<?php echo htmlspecialchars($_POST['tags'] ?? ''); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="tag1, tag2, tag3">
+                                    <input type="text" id="tags" name="tags" value="<?php echo htmlspecialchars($_POST['tags'] ?? ''); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="tag1, tag2, tag3">
                                     <p class="text-sm text-gray-500 mt-1">Separate tags with commas</p>
                                     
                                     <?php if (!empty($tagSuggestions)): ?>
@@ -233,7 +234,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                             
                             <div>
                                 <label for="featured_image" class="block text-sm font-medium text-gray-700 mb-2">Image URL</label>
-                                <input type="url" id="featured_image" name="featured_image" value="<?php echo htmlspecialchars($_POST['featured_image'] ?? ''); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="https://example.com/image.jpg">
+                                <input type="url" id="featured_image" name="featured_image" value="<?php echo htmlspecialchars($_POST['featured_image'] ?? ''); ?>" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="https://example.com/image.jpg">
                                 <p class="text-sm text-gray-500 mt-1">Enter the URL of your featured image</p>
                             </div>
                             
@@ -248,7 +249,7 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                             
                             <div>
                                 <label for="excerpt" class="block text-sm font-medium text-gray-700 mb-2">Post Excerpt</label>
-                                <textarea id="excerpt" name="excerpt" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Brief description of your post (optional)"><?php echo htmlspecialchars($_POST['excerpt'] ?? ''); ?></textarea>
+                                <textarea id="excerpt" name="excerpt" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Brief description of your post (optional)"><?php echo htmlspecialchars($_POST['excerpt'] ?? ''); ?></textarea>
                                 <p class="text-sm text-gray-500 mt-1">A short summary that appears in post previews</p>
                             </div>
                         </div>
@@ -260,10 +261,10 @@ $tagSuggestions = array_unique(array_filter(array_map('trim', $tagSuggestions)))
                     <a href="posts.php" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                         Cancel
                     </a>
-                    <button type="submit" name="action" value="save_draft" class="px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition-colors">
+                    <button type="submit" name="action" value="save_draft" class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors">
                         <i class="fas fa-save mr-2"></i>Save as Draft
                     </button>
-                    <button type="submit" name="action" value="publish" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                    <button type="submit" name="action" value="publish" class="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
                         <i class="fas fa-paper-plane mr-2"></i>Publish Post
                     </button>
                 </div>

@@ -37,7 +37,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($post['meta_title'] ?: $post['title']); ?> - eTax consultants Pakistan</title>
+    <title><?php echo htmlspecialchars($post['meta_title'] ?: $post['title']); ?> - <?php echo SITE_NAME; ?> Pakistan</title>
     <meta name="description" content="<?php echo htmlspecialchars($post['meta_description'] ?: $post['excerpt']); ?>">
     <meta property="og:title" content="<?php echo htmlspecialchars($post['title']); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($post['excerpt']); ?>">
@@ -49,6 +49,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <!-- Header -->
@@ -89,7 +90,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
             <!-- Post Header -->
             <div class="mb-8">
                 <div class="flex items-center gap-2 mb-4">
-                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
                         <?php echo htmlspecialchars($post['category']); ?>
                     </span>
                     <span class="text-gray-500 text-sm">
@@ -114,12 +115,12 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
 
                 <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-purple-600 text-xl"></i>
                         </div>
                         <div>
                             <div class="font-medium text-gray-900">
-                                <?php echo htmlspecialchars($author['full_name'] ?? 'eTax consultants Team'); ?>
+                                <?php echo htmlspecialchars($author['full_name'] ?? SITE_NAME.' Team'); ?>
                             </div>
                             <div class="text-sm text-gray-500">
                                 Tax Consultant
@@ -128,7 +129,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
                     </div>
                     
                     <div class="ml-auto flex items-center gap-3">
-                        <button class="text-gray-400 hover:text-blue-600 transition-colors" onclick="sharePost()">
+                        <button class="text-gray-400 hover:text-purple-600 transition-colors" onclick="sharePost()">
                             <i class="fas fa-share-alt text-xl"></i>
                         </button>
                         <button class="text-gray-400 hover:text-red-600 transition-colors" onclick="likePost()">
@@ -195,22 +196,22 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
             <?php endif; ?>
 
             <!-- Share Section -->
-            <div class="bg-blue-50 rounded-xl p-6 mb-8">
+            <div class="bg-purple-50 rounded-xl p-6 mb-8">
                 <h3 class="text-lg font-semibold text-gray-900 mb-3">Share this article:</h3>
                 <div class="flex gap-3">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(SITE_URL . '/post.php?slug=' . $post['slug']); ?>" 
                        target="_blank" 
-                       class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                       class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
                         <i class="fab fa-facebook mr-2"></i>Facebook
                     </a>
                     <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(SITE_URL . '/post.php?slug=' . $post['slug']); ?>&text=<?php echo urlencode($post['title']); ?>" 
                        target="_blank" 
-                       class="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors">
+                       class="bg-purple-400 text-white px-4 py-2 rounded-lg hover:bg-purple-500 transition-colors">
                         <i class="fab fa-twitter mr-2"></i>Twitter
                     </a>
                     <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode(SITE_URL . '/post.php?slug=' . $post['slug']); ?>" 
                        target="_blank" 
-                       class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
+                       class="bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 transition-colors">
                         <i class="fab fa-linkedin mr-2"></i>LinkedIn
                     </a>
                 </div>
@@ -232,7 +233,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
                                 <div class="p-4">
                                     <h4 class="font-semibold text-gray-900 mb-2 line-clamp-2">
                                         <a href="post.php?slug=<?php echo $relatedPost['slug']; ?>" 
-                                           class="hover:text-blue-600 transition-colors">
+                                           class="hover:text-purple-600 transition-colors">
                                             <?php echo htmlspecialchars($relatedPost['title']); ?>
                                         </a>
                                     </h4>
@@ -240,7 +241,7 @@ $category = $db->fetch("SELECT * FROM categories WHERE name = ?", [$post['catego
                                         <?php echo formatDate($relatedPost['published_at']); ?>
                                     </p>
                                     <a href="post.php?slug=<?php echo $relatedPost['slug']; ?>" 
-                                       class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                                       class="text-purple-600 hover:text-purple-700 text-sm font-medium">
                                         Read More <i class="fas fa-arrow-right ml-1"></i>
                                     </a>
                                 </div>

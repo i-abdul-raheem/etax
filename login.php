@@ -45,27 +45,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - eTax consultants Pakistan</title>
-    <meta name="description" content="Login to your eTax consultants Pakistan account to access the admin dashboard.">
+    <title>Login - <?php echo SITE_NAME; ?> Pakistan</title>
+    <meta name="description" content="Login to your <?php echo SITE_NAME; ?> Pakistan account to access the admin dashboard.">
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-md.png">
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-br from-purple-50 via-white to-green-50 min-h-screen flex items-center justify-center">
     <!-- Background Elements -->
     <div class="absolute inset-0">
-        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div class="absolute bottom-20 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
     </div>
 
     <div class="relative z-10 w-full max-w-md">
         <!-- Logo and Title -->
         <div class="text-center mb-8">
             <div class="flex justify-center mb-4">
-                <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-yellow-500 rounded-2xl flex items-center justify-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-green-500 rounded-2xl flex items-center justify-center">
                     <i class="fas fa-gavel text-white text-3xl"></i>
                 </div>
             </div>
@@ -73,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 Welcome Back
             </h1>
             <p class="text-gray-600">
-                Sign in to your eTax consultants account
+                Sign in to your <?php echo SITE_NAME; ?> account
             </p>
         </div>
 
@@ -89,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
 
             <?php if ($success): ?>
-                <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded-lg mb-6">
                     <div class="flex items-center">
                         <i class="fas fa-check-circle mr-2"></i>
                         <span><?php echo htmlspecialchars($success); ?></span>
@@ -112,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             name="username"
                             required
                             value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"
-                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
                             placeholder="Enter your username"
                             autocomplete="username"
                         >
@@ -132,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             id="password"
                             name="password"
                             required
-                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
                             placeholder="Enter your password"
                             autocomplete="current-password"
                         >
@@ -152,20 +153,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             id="remember"
                             name="remember"
                             type="checkbox"
-                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                            class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                         >
                         <label for="remember" class="ml-2 block text-sm text-gray-700">
                             Remember me
                         </label>
                     </div>
-                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 transition-colors">
+                    <a href="contact.php" class="text-sm text-purple-600 hover:text-purple-700 transition-colors">
                         Forgot password?
                     </a>
                 </div>
 
                 <button
                     type="submit"
-                    class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+                    class="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
                 >
                     <i class="fas fa-sign-in-alt mr-2"></i>
                     Sign In
@@ -175,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="mt-6 text-center">
                 <p class="text-sm text-gray-600">
                     Don't have an account? 
-                    <a href="register.php" class="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                    <a href="contact.php" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
                         Contact administrator
                     </a>
                 </p>
@@ -191,13 +192,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <!-- Demo Credentials -->
-        <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h3 class="text-sm font-medium text-blue-800 mb-2">Demo Account</h3>
-            <div class="text-xs text-blue-700 space-y-1">
+        <!-- <div class="mt-8 bg-purple-50 border border-purple-200 rounded-lg p-4">
+            <h3 class="text-sm font-medium text-purple-800 mb-2">Demo Account</h3>
+            <div class="text-xs text-purple-700 space-y-1">
                 <div><strong>Username:</strong> admin</div>
                 <div><strong>Password:</strong> admin123</div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- JavaScript -->
