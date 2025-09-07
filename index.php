@@ -133,13 +133,13 @@ require_once 'includes/db.sqlite.php';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <?php
                 $services = [
-                    ['icon' => 'fas fa-user-tie', 'title' => 'Income Tax', 'description' => 'Personal tax planning and compliance for individuals and professionals.', 'features' => ['Personal Tax Returns', 'Tax Planning', 'Investment Tax', 'Property Tax']],
+                    ['icon' => 'fas fa-user-tie', 'title' => 'Income Tax', 'description' => 'Personal tax planning and compliance for individuals and professionals.', 'features' => ['Personal Tax Returns', 'Tax Planning', 'Tax Refunds', 'Property Tax']],
                     ['icon' => 'fas fa-file-invoice', 'title' => 'Sales Tax', 'description' => 'Specialized services for sales tax, federal excise duty, and customs matters.', 'features' => ['Sales Tax Registration', 'Sales Tax Returns submission', '⁠⁠Invoice Management', 'Stock Portfolio Management']],
-                    ['icon' => 'fas fa-globe', 'title' => 'Punjab Service Tax (PRA)', 'description' => 'Expert guidance on cross-border tax matters and international business.', 'features' => ['Transfer Pricing', 'Double Taxation', 'Foreign Investment', 'International Compliance']],
+                    ['icon' => 'fas fa-globe', 'title' => 'Punjab Service Tax (PRA)', 'description' => 'Expert guidance on cross-border tax matters and international business.', 'features' => ['PRA Tax Registration', 'PRA Tax Returns submission', '⁠⁠Invoice Management', 'PRA Tax Guidance']],
                     ['icon' => 'fas fa-building', 'title' => 'Corporate Tax', 'description' => 'Comprehensive corporate tax solutions for businesses of all sizes.', 'features' => ['Corporate Structuring', 'Tax Optimization', 'Audit Support', 'Compliance Management']],
                     ['icon' => 'fas fa-gavel', 'title' => 'Litigation Services', 'description' => 'Preserve and protect your constitutional and legal rights through effective litigation in tax courts.', 'features' => ['Tax Appeals', 'Constitutional Petitions', 'High Court Representation', 'Supreme Court Cases']],
                     ['icon' => 'fas fa-calculator', 'title' => 'Tax Compliance', 'description' => 'Ensure timely and accurate fulfillment of all tax obligations under applicable laws.', 'features' => ['Tax Returns Filing', 'Compliance Audits', 'Tax Planning', 'Regulatory Compliance']],
-                    ['icon' => 'fas fa-lightbulb', 'title' => 'Advisory Services', 'description' => 'Clear and creative tax advice for transactions, controversies, and legislation.', 'features' => ['Tax Strategy', 'Business Structuring', 'International Tax', 'Corporate Tax']],
+                    ['icon' => 'fas fa-lightbulb', 'title' => 'Advisory Services', 'description' => 'Clear and creative tax advice for transactions, controversies, and legislation.', 'features' => ['Tax Strategy', 'Business Structuring', 'Tax Withholdings', 'Corporate Tax']],
                     ['icon' => 'fas fa-shield-alt', 'title' => 'Import Export (PSW)', 'description' => 'Ongoing priority consultancy and day-to-day tax advisory for businesses.', 'features' => ['⁠Import Export Registration', '⁠⁠Import Export Certificate', '⁠⁠Import Export Tax', 'Hassle-free transition']],
                 ];
 
@@ -190,7 +190,7 @@ require_once 'includes/db.sqlite.php';
                     </h2>
                     
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        <?php echo SITE_NAME; ?> has been at the forefront of tax consultancy in Pakistan for over two decades. 
+                        <?php echo SITE_NAME; ?> has been at the forefront of tax consultancy in Pakistan for over 6 years. 
                         Our team combines deep legal expertise with practical business understanding to deliver 
                         exceptional results for our clients.
                     </p>
@@ -236,7 +236,7 @@ require_once 'includes/db.sqlite.php';
                         
                         <blockquote class="text-gray-600 italic mb-6 leading-relaxed">
                             "<?php echo SITE_NAME; ?> always offers effective solutions to complex legal issues. Their forte is their 
-                            speed and swift response. We believe that they are the finest lawyers a litigant can find 
+                            speed and swift response. We believe that they are the finest consultants a litigant can find 
                             in our legal system."
                         </blockquote>
                         
@@ -284,13 +284,20 @@ require_once 'includes/db.sqlite.php';
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                     <div class="flex flex-col items-center text-center">
                         <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
                             <i class="fas fa-phone text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Call Us Now</h3>
                         <p class="text-purple-100"><?php echo SITE_PHONE; ?></p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Send Message</h3>
+                        <p class="text-purple-100">+92 305 7612515</p>
                     </div>
                     
                     <div class="flex flex-col items-center text-center">

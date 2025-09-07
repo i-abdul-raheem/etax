@@ -111,7 +111,7 @@ $selectedService = isset($_GET['service']) ? sanitize($_GET['service']) : '';
                     <!-- Calendly inline widget begin -->
                     <div
                         class="calendly-inline-widget w-full"
-                        data-url="https://calendly.com/etaxconsultants-org/30min"
+                        data-url="https://calendly.com/etaxconsultants-org/30min?timezone=Asia/Karachi"
                         style="min-width:320px; height:700px;">
                     </div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -132,6 +132,16 @@ $selectedService = isset($_GET['service']) ? sanitize($_GET['service']) : '';
                                 <div>
                                     <p class="text-sm text-gray-600">Main Office</p>
                                     <p class="font-semibold text-gray-900"><?php echo SITE_PHONE; ?></p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-600">WhatsApp</p>
+                                    <p class="font-semibold text-gray-900">+92-305-7612515</p>
                                 </div>
                             </div>
 
@@ -159,7 +169,7 @@ $selectedService = isset($_GET['service']) ? sanitize($_GET['service']) : '';
 
                     <!-- Office Locations -->
                     <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Offices</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Office</h3>
 
                         <div class="space-y-6">
 

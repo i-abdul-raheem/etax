@@ -14,16 +14,16 @@
                     We provide comprehensive tax solutions for individuals and businesses across Pakistan.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.facebook.com/profile.php?id=100064110752290" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://x.com/ObeyRehman" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.linkedin.com/company/etax-consultants" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.instagram.com/etax_consultants" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
                 </div>
