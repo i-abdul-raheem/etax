@@ -66,7 +66,7 @@ require_once 'includes/db.sqlite.php';
                             <div class="text-gray-600">Years Experience</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-purple-600 mb-2">500+</div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">1000+</div>
                             <div class="text-gray-600">Happy Clients</div>
                         </div>
                     </div>

@@ -82,7 +82,7 @@ require_once 'includes/db.sqlite.php';
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
                         <i class="fas fa-users text-2xl"></i>
                     </div>
-                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">500+</div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">1000+</div>
                     <div class="text-xl font-semibold mb-2">Happy Clients</div>
                     <div class="text-purple-100 text-sm">Satisfied customers across Pakistan</div>
                 </div>
@@ -93,7 +93,7 @@ require_once 'includes/db.sqlite.php';
                     </div>
                     <div class="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">6+</div>
                     <div class="text-xl font-semibold mb-2">Years Experience</div>
-                    <div class="text-purple-100 text-sm">Decades of tax expertise</div>
+                    <div class="text-purple-100 text-sm">Years of tax expertise</div>
                 </div>
                 
                 <div class="text-center group">
